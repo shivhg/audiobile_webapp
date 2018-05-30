@@ -1,0 +1,14 @@
+.audioPlayer {
+    width: 800px;
+}
+
+.play {
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid green;
+    border-radius: 10px;
+}
+
+.chapter {
+    padding: 20px;
+}
