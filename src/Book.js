@@ -12,7 +12,7 @@ class Book extends Component {
     const bookId = document.location.pathname.split('/').pop()
     this.setState({...this.state, bookId: bookId})
 
-    const res = await fetch(`api/${bookId}`)
+    const res = await fetch(`/api/audio-books-list/${bookId}`)
     const body = await res.json()
 
     this.setState({...this.state, chapters: body.chapters})
