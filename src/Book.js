@@ -23,12 +23,16 @@ class Book extends Component {
     this.setState({...this.state, currentPlaying: index})
   }
 
+  nextAudio() {
+    setTimeout(() => this.setState({...this.state, currentPlaying: (this.state.currentPlaying + 1)}), 2000)
+  }
+
   render() {
     return(
       <ol>
         <div>
           <h2>{this.state.chapters[this.state.currentPlaying]}</h2>
-          <Audio bookId={this.state.bookId} currentPlaying={this.state.currentPlaying} />
+          <Audio bookId={this.state.bookId} currentPlaying={this.state.currentPlaying} done={this.nextAudio.bind(this)}/>
          </div>
 
         { this.state.chapters.map((bookName, index) =>
