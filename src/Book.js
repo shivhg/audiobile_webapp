@@ -19,7 +19,7 @@ class Book extends Component {
   }
 
   changeChapter(index) {
-    console.log(index)
+    window.scrollTo(0, 0)
     this.setState({...this.state, currentPlaying: index})
   }
 
@@ -27,6 +27,7 @@ class Book extends Component {
     return(
       <ol>
         <div>
+          <h2>{this.state.chapters[this.state.currentPlaying]}</h2>
           <Audio bookId={this.state.bookId} currentPlaying={this.state.currentPlaying} />
          </div>
 
